@@ -162,8 +162,8 @@ export default function UserProfile() {
               </a>
             </CardAvatar>
             <CardBody profile>
-              <h6 className={classes.cardCategory}>University of Waterloo</h6>
-              <h4 className={classes.cardTitle}>Ayman Kamran</h4>
+              <h6 className={classes.cardCategory}>Student Profile</h6>
+              <h2 className={classes.cardTitle}>Ayman Kamran</h2>
               <p className={classes.description}>
                 I'm a student studying at the University of Waterloo! I'm double majoring 
                 in both computer science and financial management - Super excited to participate at HackMIT!
