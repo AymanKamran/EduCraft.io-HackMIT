@@ -16,6 +16,7 @@ import CardFooter from "components/Card/CardFooter.js";
 import avatar from "assets/img/faces/ayman.jpg";
 import Collapsible from 'react-collapsible';
 
+
 const styles = {
   cardCategoryWhite: {
     color: "rgba(255,255,255,.62)",
@@ -37,8 +38,31 @@ const styles = {
 
 const useStyles = makeStyles(styles);
 
+function CallAPI(){
+  var unirest = require('unirest');
+  console.log("API CALL")
+  var req = unirest('GET', 'https://deckofcardsapi.com/api/deck/new/draw/?count=2')
+    .end(function (res) {
+      if (res.error) throw new Error(res.error); 
+      console.log(res.raw_body);
+    });
+    console.log("req is ", req);
+    var response = req.raw_body
+    // .response.body;
+    console.log("response is ", response);
+
+  // return res.raw_body;
+}
+
+function onButtonClickHandler (){
+  var APIresponse = CallAPI()
+  // this.setState({ showMessageButton2: !this.state.showMessageButton2 })
+}
+
 export default function UserProfile() {
   const classes = useStyles();
+  
+
   return (
     <div>
 
@@ -150,7 +174,7 @@ export default function UserProfile() {
               </GridContainer>
             </CardBody>
             <CardFooter>
-              <Button color="primary"> Start Class </Button>
+              <Button color="primary" onClick={onButtonClickHandler}> Start Class </Button>
             </CardFooter>
           </Card>
         </GridItem>
