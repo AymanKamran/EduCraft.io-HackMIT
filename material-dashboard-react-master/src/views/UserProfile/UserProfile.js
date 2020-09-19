@@ -3,6 +3,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import InputLabel from "@material-ui/core/InputLabel";
 // core components
+import Table from "components/Table/Table.js";
 import GridItem from "components/Grid/GridItem.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import CustomInput from "components/CustomInput/CustomInput.js";
@@ -12,8 +13,8 @@ import CardHeader from "components/Card/CardHeader.js";
 import CardAvatar from "components/Card/CardAvatar.js";
 import CardBody from "components/Card/CardBody.js";
 import CardFooter from "components/Card/CardFooter.js";
-
 import avatar from "assets/img/faces/marc.jpg";
+import Collapsible from 'react-collapsible';
 
 const styles = {
   cardCategoryWhite: {
@@ -40,30 +41,32 @@ export default function UserProfile() {
   const classes = useStyles();
   return (
     <div>
-      <GridContainer>
+
+      <GridContainer> 
+
         <GridItem xs={12} sm={12} md={8}>
           <Card>
             <CardHeader color="primary">
-              <h4 className={classes.cardTitleWhite}>Edit Profile</h4>
-              <p className={classes.cardCategoryWhite}>Complete your profile</p>
+              <h4 className={classes.cardTitleWhite}>Class</h4>
+              <p className={classes.cardCategoryWhite}>Complete your class profile</p>
             </CardHeader>
             <CardBody>
               <GridContainer>
                 <GridItem xs={12} sm={12} md={5}>
                   <CustomInput
-                    labelText="Company (disabled)"
+                    labelText="Class Dropdown"
                     id="company-disabled"
                     formControlProps={{
                       fullWidth: true
                     }}
                     inputProps={{
-                      disabled: true
+                      disabled: false
                     }}
                   />
                 </GridItem>
                 <GridItem xs={12} sm={12} md={3}>
                   <CustomInput
-                    labelText="Username"
+                    labelText="Select Language"
                     id="username"
                     formControlProps={{
                       fullWidth: true
@@ -72,7 +75,7 @@ export default function UserProfile() {
                 </GridItem>
                 <GridItem xs={12} sm={12} md={4}>
                   <CustomInput
-                    labelText="Email address"
+                    labelText="Zoom API Key"
                     id="email-address"
                     formControlProps={{
                       fullWidth: true
@@ -80,7 +83,7 @@ export default function UserProfile() {
                   />
                 </GridItem>
               </GridContainer>
-              <GridContainer>
+              {/* <GridContainer>
                 <GridItem xs={12} sm={12} md={6}>
                   <CustomInput
                     labelText="First Name"
@@ -99,27 +102,27 @@ export default function UserProfile() {
                     }}
                   />
                 </GridItem>
-              </GridContainer>
+              </GridContainer> */}
               <GridContainer>
-                <GridItem xs={12} sm={12} md={4}>
+                {/* <GridItem xs={12} sm={12} md={4}>
                   <CustomInput
-                    labelText="City"
+                    labelText="Notetaking Styled Template"
                     id="city"
                     formControlProps={{
                       fullWidth: true
                     }}
                   />
-                </GridItem>
-                <GridItem xs={12} sm={12} md={4}>
+                </GridItem> */}
+                {/* <GridItem xs={12} sm={12} md={4}>
                   <CustomInput
-                    labelText="Country"
+                    labelText="CC Language DropDown"
                     id="country"
                     formControlProps={{
                       fullWidth: true
                     }}
                   />
-                </GridItem>
-                <GridItem xs={12} sm={12} md={4}>
+                </GridItem> */}
+                {/* <GridItem xs={12} sm={12} md={4}>
                   <CustomInput
                     labelText="Postal Code"
                     id="postal-code"
@@ -127,13 +130,13 @@ export default function UserProfile() {
                       fullWidth: true
                     }}
                   />
-                </GridItem>
+                </GridItem> */}
               </GridContainer>
               <GridContainer>
                 <GridItem xs={12} sm={12} md={12}>
-                  <InputLabel style={{ color: "#AAAAAA" }}>About me</InputLabel>
+                  <InputLabel style={{ color: "#AAAAAA" }}> </InputLabel>
                   <CustomInput
-                    labelText="Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo."
+                    labelText="Class Deadlines"
                     id="about-me"
                     formControlProps={{
                       fullWidth: true
@@ -147,7 +150,7 @@ export default function UserProfile() {
               </GridContainer>
             </CardBody>
             <CardFooter>
-              <Button color="primary">Update Profile</Button>
+              <Button color="primary"> Start Class </Button>
             </CardFooter>
           </Card>
         </GridItem>
@@ -172,6 +175,64 @@ export default function UserProfile() {
             </CardBody>
           </Card>
         </GridItem>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <GridContainer>
+      <GridItem >
+      <Collapsible trigger="Generated Documents Will Appear Below...">
+        <Card>
+          <CardHeader color="primary">
+            <h4 className={classes.cardTitleWhite}>Generated Documents</h4>
+            <p className={classes.cardCategoryWhite}>
+              Learning Could Never Be Easier
+            </p>
+          </CardHeader>
+          <CardBody>
+            <Table
+              tableHeaderColor="primary"
+              tableHead={["Document Type", "URL"]}
+              tableData={[
+                ["Transcript", "URL Generated Here"],
+                ["Note-Taking Document", "URL Generated Here"],
+                ["ML-Generated Summary", "URL Generated Here"],
+                ]}
+            />
+          </CardBody>
+        </Card>
+        </Collapsible>
+      </GridItem>
+    
+    </GridContainer>
       </GridContainer>
     </div>
   );
