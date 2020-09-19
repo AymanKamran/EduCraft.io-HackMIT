@@ -13,7 +13,7 @@ import CardHeader from "components/Card/CardHeader.js";
 import CardAvatar from "components/Card/CardAvatar.js";
 import CardBody from "components/Card/CardBody.js";
 import CardFooter from "components/Card/CardFooter.js";
-import avatar from "assets/img/faces/marc.jpg";
+import avatar from "assets/img/faces/ayman.jpg";
 import Collapsible from 'react-collapsible';
 
 const styles = {
@@ -162,12 +162,11 @@ export default function UserProfile() {
               </a>
             </CardAvatar>
             <CardBody profile>
-              <h6 className={classes.cardCategory}>CEO / CO-FOUNDER</h6>
-              <h4 className={classes.cardTitle}>Alec Thompson</h4>
+              <h6 className={classes.cardCategory}>University of Waterloo</h6>
+              <h4 className={classes.cardTitle}>Ayman Kamran</h4>
               <p className={classes.description}>
-                Don{"'"}t be scared of the truth because we need to restart the
-                human foundation in truth And I love you like Kanye loves Kanye
-                I love Rick Owens’ bed design but the back is...
+                I'm a student studying at the University of Waterloo! I'm double majoring 
+                in both computer science and financial management - Super excited to participate at HackMIT!
               </p>
               <Button color="primary" round>
                 Follow
@@ -211,7 +210,7 @@ export default function UserProfile() {
       <GridItem >
       <Collapsible trigger="Generated Documents Will Appear Below...">
         <Card>
-          <CardHeader color="primary">
+          <CardHeader color="success">
             <h4 className={classes.cardTitleWhite}>Generated Documents</h4>
             <p className={classes.cardCategoryWhite}>
               Learning Could Never Be Easier
