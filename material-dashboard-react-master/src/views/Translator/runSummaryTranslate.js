@@ -2,6 +2,15 @@
 // npm install --save @google-cloud/translate
 // export GOOGLE_APPLICATION_CREDENTIALS="/Users/dapi/Desktop/keys.json"
 
+const fs = require('fs'); 
+const FinalSummary = fs.readFileSync('./../BertSummarizer/FinalSummary.txt', 
+            {encoding:'utf8', flag:'r'}); 
+
+const FinalTranscript = fs.readFileSync('./../GoogleCloud_SpeechToTextAPI/FinalTranscript.txt', 
+            {encoding:'utf8', flag:'r'});
+            
+            
+
 // Imports the Google Cloud client library
 const {Translate} = require('@google-cloud/translate').v2;
 
@@ -14,18 +23,18 @@ const translate = new Translate();
 const text = 'The text to translate, e.g. Hello, world!';
 const target = 'fr';
 
-async function translateText() {
+async function translateTextSummary() {
   // Translates the text into the target language. "text" can be a string for
   // translating a single piece of text, or an array of strings for translating
   // multiple texts.
-  let [translations] = await translate.translate(text, target);
+  let [translations] = await translate.translate(FinalSummary, target);
   translations = Array.isArray(translations) ? translations : [translations];
-  console.log('Translations:');
+  console.log('Translated Summary:');
   translations.forEach((translation, i) => {
     console.log(`Speaker: ${translation}`);
     // console.log(`${text[i]} => (${target}) ${translation}`);
   });
 }
-
-translateText();
+// console.log("Translated Summary is:")
+translateTextSummary();
 

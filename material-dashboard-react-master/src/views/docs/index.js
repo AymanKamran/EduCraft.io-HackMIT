@@ -1,17 +1,28 @@
 //make sure to change scope
 
 var util = require('util');
+const fs = require('fs'); 
+const FinalTranslated_Transcript = fs.readFileSync('./../Translator/TranslatedFinalTranscript.txt', 
+            {encoding:'utf8', flag:'r'}); 
+const FinalTranslated_Summary = fs.readFileSync('./../Translator/TranslatedFinalSummary.txt', 
+            {encoding:'utf8', flag:'r'}); 
+const FinalSummary = fs.readFileSync('./../BertSummarizer/FinalSummary.txt', 
+            {encoding:'utf8', flag:'r'}); 
+const FinalTranscript = fs.readFileSync('./../GoogleCloud_SpeechToTextAPI/FinalTranscript.txt', 
+            {encoding:'utf8', flag:'r'});
 
-
+console.log("Here is FinalTranslated_Transcript", FinalTranslated_Transcript, "\n\n\n\n\n\n")
+console.log("Here is FinalTranslated_Summary", FinalTranslated_Summary, "\n\n\n\n\n\n")
+console.log("Here is FinalSummary", FinalSummary, "\n\n\n\n\n\n")
+console.log("Here is FinalTranscript", FinalTranscript, "\n\n\n\n\n\n")
 
 var IDTranscriptDOCID = "11cjl_RzEePOlvIf87t8NkmIPP1Q2gZPW9CEmdBinax0"
 var BERTSummaryDocID = "1zAHnCChAyIdbwRlS4IUkvx0SJ9wUOVvGLBw0gHc8h5M"
-var englishTranscript;
-var englishTranscript;
-var englishSummary;
-var frenchSummary;
+// var englishTranscript;
+// var englishTranscript;
+// var englishSummary;
+// var frenchSummary;
 
-const fs = require('fs');
 const readline = require('readline');
 const {google} = require('googleapis');
 
@@ -128,11 +139,22 @@ async function printDocTitleAndAddText(auth) {
   //   console.error(err);
   // });
 
+//-------------------------------------------//-------------------------------------------//-------------------------------------------
+//-------------------------------------------//-------------------------------------------//-------------------------------------------
+//-------------------------------------------//-------------------------------------------//-------------------------------------------
+//-------------------------------------------//-------------------------------------------//-------------------------------------------
+//-------------------------------------------//-------------------------------------------//-------------------------------------------
+//-------------------------------------------//-------------------------------------------//-------------------------------------------
+//-------------------------------------------//-------------------------------------------//-------------------------------------------
+//-------------------------------------------//-------------------------------------------//-------------------------------------------
+//-------------------------------------------//-------------------------------------------//-------------------------------------------
+//-------------------------------------------//-------------------------------------------//-------------------------------------------
+//-------------------------------------------//-------------------------------------------//-------------------------------------------
 
 var FrenchTranscriptIndex = 190
-var FrenchTranscript = "hello!"
+var FrenchTranscript = FinalTranslated_Transcript
 var EnglishTranscriptIndex = 168
-var EnglishTranscript = "hello!"
+var EnglishTranscript = FinalTranscript
 
 // //-------------------------------------------
 console.log("Uploading French Transcript")
@@ -177,12 +199,23 @@ console.log("Uploaded French Transcript ------------")
 console.log("Uploaded English Transcript ------------")
 
   // //-------------------------------------------
+//-------------------------------------------//-------------------------------------------//-------------------------------------------
+//-------------------------------------------//-------------------------------------------//-------------------------------------------
+//-------------------------------------------//-------------------------------------------//-------------------------------------------
+//-------------------------------------------//-------------------------------------------//-------------------------------------------
+//-------------------------------------------//-------------------------------------------//-------------------------------------------
+//-------------------------------------------//-------------------------------------------//-------------------------------------------
+//-------------------------------------------//-------------------------------------------//-------------------------------------------
+//-------------------------------------------//-------------------------------------------//-------------------------------------------
+//-------------------------------------------//-------------------------------------------//-------------------------------------------
+//-------------------------------------------//-------------------------------------------//-------------------------------------------
+//-------------------------------------------//-------------------------------------------//-------------------------------------------
 
 
 var FrenchSummaryIndex = 230
-var FrenchSummary = "Summary!"
+var FrenchSummary = FinalTranslated_Summary
 var EnglishSummaryIndex = 209
-var EnglishSummary = "Summary!"
+var EnglishSummary = FinalSummary
 // //-------------------------------------------
 console.log("Uploading French Summary")
 docs.documents.batchUpdate({
