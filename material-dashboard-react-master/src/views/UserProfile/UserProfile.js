@@ -15,7 +15,7 @@ import CardBody from "components/Card/CardBody.js";
 import CardFooter from "components/Card/CardFooter.js";
 import avatar from "assets/img/faces/ayman.jpg";
 import Collapsible from 'react-collapsible';
-import SpeechToTextAPI from "./../GoogleCloud_SpeechToTextAPI/ComprehensiveFunction_SpeechToTextTestRun.js"
+// import SpeechToTextAPI from "./../GoogleCloud_SpeechToTextAPI/ComprehensiveFunction_SpeechToTextTestRun.js"
 
 const styles = {
   cardCategoryWhite: {

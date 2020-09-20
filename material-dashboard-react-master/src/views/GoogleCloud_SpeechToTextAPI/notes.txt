@@ -8,6 +8,7 @@ Ammar:
 
 npm install --save @google-cloud/speech
 npm i node-record-lpcm16
+npm i unirest
 
 te way u execute it is:
- node SpeechToTextTestRun.js micStreamRecognize
+ node ComprehensiveFunction_SpeechToTextTestRun.js micStreamRecognize
