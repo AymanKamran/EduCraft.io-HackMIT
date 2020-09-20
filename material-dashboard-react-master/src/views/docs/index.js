@@ -129,8 +129,11 @@ async function printDocTitleAndAddText(auth) {
   // });
 
 
-var FrenchTranscriptIndex = 214
-var EnglishTranscriptIndex = 178
+var FrenchTranscriptIndex = 190
+var FrenchTranscript = "hello!"
+var EnglishTranscriptIndex = 168
+var EnglishTranscript = "hello!"
+
 // //-------------------------------------------
 console.log("Uploading French Transcript")
 docs.documents.batchUpdate({
@@ -143,7 +146,7 @@ docs.documents.batchUpdate({
          location: {
            index: FrenchTranscriptIndex
          },
-         text: "hello!\n"
+         text: FrenchTranscript
        }
      }
    ]
@@ -165,7 +168,7 @@ console.log("Uploaded French Transcript ------------")
           location: {
             index: EnglishTranscriptIndex
           },
-          text: "hello!\n"
+          text: EnglishTranscript
         }
       }
     ]
@@ -174,6 +177,55 @@ console.log("Uploaded French Transcript ------------")
 console.log("Uploaded English Transcript ------------")
 
   // //-------------------------------------------
+
+
+var FrenchSummaryIndex = 230
+var FrenchSummary = "Summary!"
+var EnglishSummaryIndex = 209
+var EnglishSummary = "Summary!"
+// //-------------------------------------------
+console.log("Uploading French Summary")
+docs.documents.batchUpdate({
+ auth,
+ documentId: BERTSummaryDocID,
+ requestBody: {
+   requests: [
+     {
+       insertText: {
+         location: {
+           index: FrenchSummaryIndex
+         },
+         text: FrenchSummary
+       }
+     }
+   ]
+ }
+});
+console.log("Uploaded French Summary ------------")
+
+ // //-------------------------------------------
+
+ // //-------------------------------------------
+console.log("Uploading English Summary")
+docs.documents.batchUpdate({
+ auth,
+ documentId: BERTSummaryDocID,
+ requestBody: {
+   requests: [
+     {
+       insertText: {
+         location: {
+           index: EnglishSummaryIndex
+         },
+         text: EnglishSummary
+       }
+     }
+   ]
+ }
+});
+console.log("Uploaded English Summary ------------")
+
+ // //-------------------------------------------
 
 
 }
