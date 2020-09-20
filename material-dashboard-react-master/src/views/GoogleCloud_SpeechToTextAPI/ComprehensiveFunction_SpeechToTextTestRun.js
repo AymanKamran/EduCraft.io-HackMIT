@@ -92,11 +92,7 @@ function SpeechToTextAPI(){
  
 
 
-var requireYargs = require('yargs')
- 
- 
- .demand(1)
-    .command('micStreamRecognize','Streams audio input from microphone, translates to text',{}, opts => { return microphoneStream(opts.encoding, opts.sampleRateHertz, opts.languageCode)})
+var requireYargs = require('yargs').demand(1).command('micStreamRecognize','Streams audio input from microphone, translates to text',{}, opts => { return microphoneStream(opts.encoding, opts.sampleRateHertz, opts.languageCode)})
    .options({
      encoding: {
        alias: 'e',

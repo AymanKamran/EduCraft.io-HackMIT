@@ -38,22 +38,22 @@ const styles = {
 
 const useStyles = makeStyles(styles);
 
-function runBashScript() {
-  const { exec } = require('child_process');
-  exec('chmod u+x script.sh')
+// function runBashScript() {
+//   const { exec } = require('child_process');
+//   exec('chmod u+x script.sh')
   
-  exec('./script.sh', (err, stdout, stderr) => {
-    if (err) {
-      //some err occurred
-      console.error(err)
-    } else {
-     // the *entire* stdout and stderr (buffered)
-     console.log(`stdout: ${stdout}`);
-     console.log(`stderr: ${stderr}`);
-    }
-  });
+//   exec('./script.sh', (err, stdout, stderr) => {
+//     if (err) {
+//       //some err occurred
+//       console.error(err)
+//     } else {
+//      // the *entire* stdout and stderr (buffered)
+//      console.log(`stdout: ${stdout}`);
+//      console.log(`stderr: ${stderr}`);
+//     }
+//   });
   
-}
+// }
 
 
 function CallAPI(){
@@ -75,7 +75,7 @@ function CallAPI(){
 function onButtonClickHandler (){
   console.log("about to start running script")
 
-  runBashScript()
+  // runBashScript()
 
   console.log("done running script")
   var APIresponse = CallAPI()
@@ -255,7 +255,7 @@ export default function UserProfile() {
 
         <GridContainer>
       <GridItem >
-      <Collapsible trigger="Generated Documents Will Appear Below...">
+      <Collapsible trigger="GENERATED DOCUMENTS WILL APPEAR BELOW ......">
         <Card>
           <CardHeader color="success">
             <h4 className={classes.cardTitleWhite}>Generated Documents</h4>
@@ -266,11 +266,11 @@ export default function UserProfile() {
           <CardBody>
             <Table
               tableHeaderColor="primary"
-              tableHead={["Document Type", "URL"]}
+              tableHead={["Document Type", "|",  "URL"]}
               tableData={[
-                ["Transcript", "URL Generated Here"],
-                ["Note-Taking Document", "URL Generated Here"],
-                ["ML-Generated Summary", "URL Generated Here"],
+                ["Transcript",":", "https://docs.google.com/document/d/11cjl_RzEePOlvIf87t8NkmIPP1Q2gZPW9CEmdBinax0/edit?usp=sharing"],
+                ["Note-Taking Document", ":", "https://docs.google.com/document/d/1xq_fLWX0Y2K90_mK2G63A-hqxpVHD_043R280xyMoUM/edit?usp=sharing"],
+                ["ML-Generated Summary", ":", "https://docs.google.com/document/d/1zAHnCChAyIdbwRlS4IUkvx0SJ9wUOVvGLBw0gHc8h5M/edit?usp=sharing"],
                 ]}
             />
           </CardBody>
