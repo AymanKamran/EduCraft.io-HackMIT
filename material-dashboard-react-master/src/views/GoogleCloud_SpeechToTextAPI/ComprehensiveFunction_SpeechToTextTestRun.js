@@ -86,7 +86,7 @@ function SpeechToTextAPI(){
      .on('error', console.error)
      .pipe(recognizeStream);
  
-   console.log('Listening, press Ctrl+C to stop.');
+   console.log('Listening:');
    // [END micStreamRecognize]
  }
  
