@@ -1,0 +1,13 @@
+
+  ure u must first do:
+Ayman:
+export GOOGLE_APPLICATION_CREDENTIALS="../../../CredsForHackMIT/variables.txt"
+
+
+Ammar:
+
+npm install --save @google-cloud/speech
+npm i node-record-lpcm16
+
+te way u execute it is:
+ node SpeechToTextTestRun.js micStreamRecognize
