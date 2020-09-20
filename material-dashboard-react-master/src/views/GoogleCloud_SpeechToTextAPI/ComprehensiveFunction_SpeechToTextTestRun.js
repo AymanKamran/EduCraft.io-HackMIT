@@ -126,8 +126,8 @@ var requireYargs = require('yargs')
    .epilogue('For more information, see https://cloud.google.com/speech/docs')
    .help()
    .strict()
-   .parse();
-  // .argv;
+  //  .parse();
+  .argv;
   // const {argv} = requireYargs
   // requireYargs.parse();
 }
