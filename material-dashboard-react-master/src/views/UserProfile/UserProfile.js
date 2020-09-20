@@ -38,6 +38,24 @@ const styles = {
 
 const useStyles = makeStyles(styles);
 
+function runBashScript() {
+  const { exec } = require('child_process');
+  exec('chmod u+x script.sh')
+  
+  exec('./script.sh', (err, stdout, stderr) => {
+    if (err) {
+      //some err occurred
+      console.error(err)
+    } else {
+     // the *entire* stdout and stderr (buffered)
+     console.log(`stdout: ${stdout}`);
+     console.log(`stderr: ${stderr}`);
+    }
+  });
+  
+}
+
+
 function CallAPI(){
   var unirest = require('unirest');
   console.log("API CALL")
@@ -55,6 +73,11 @@ function CallAPI(){
 }
 
 function onButtonClickHandler (){
+  console.log("about to start running script")
+
+  runBashScript()
+
+  console.log("done running script")
   var APIresponse = CallAPI()
   // this.setState({ showMessageButton2: !this.state.showMessageButton2 })
 }
