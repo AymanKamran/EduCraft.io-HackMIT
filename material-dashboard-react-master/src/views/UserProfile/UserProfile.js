@@ -260,7 +260,7 @@ export default function UserProfile() {
           <CardHeader color="success">
             <h4 className={classes.cardTitleWhite}>Generated Documents</h4>
             <p className={classes.cardCategoryWhite}>
-              Learning Could Never Be Easier
+              Your auto-developed, personalized note-taking package
             </p>
           </CardHeader>
           <CardBody>
@@ -268,9 +268,9 @@ export default function UserProfile() {
               tableHeaderColor="primary"
               tableHead={["Document Type", "|",  "URL"]}
               tableData={[
-                ["Transcript",":", "https://docs.google.com/document/d/11cjl_RzEePOlvIf87t8NkmIPP1Q2gZPW9CEmdBinax0/edit?usp=sharing"],
-                ["Note-Taking Document", ":", "https://docs.google.com/document/d/1xq_fLWX0Y2K90_mK2G63A-hqxpVHD_043R280xyMoUM/edit?usp=sharing"],
-                ["ML-Generated Summary", ":", "https://docs.google.com/document/d/1zAHnCChAyIdbwRlS4IUkvx0SJ9wUOVvGLBw0gHc8h5M/edit?usp=sharing"],
+                ["Transcript",":", "https://rb.gy/5xrxut"],
+                ["Note-Taking Document", ":", "https://rb.gy/jf5ylv"],
+                ["ML-Generated Summary", ":", "https://rb.gy/x1fj2v"],
                 ]}
             />
           </CardBody>
