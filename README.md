@@ -3,6 +3,11 @@ At HackMIT, we built something we call EduCraft.io, an ed-tech streaming platfor
 
 # Product Intro
 ![](DocsAndAssets/Intro.png)
+
+# Video Demo - This was Pitched @HackMIT 
+Note: This is a silenced video as we spoke over the video during our pitch.
+https://drive.google.com/file/d/1OYee1zk7w8ij0sU0ueafNbrx29ysuAPy/view?usp=sharing
+
 # Our Solution
 ![](DocsAndAssets/Solution.png)
 # Our process
