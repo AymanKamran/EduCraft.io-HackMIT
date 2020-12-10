@@ -2,12 +2,12 @@
 At HackMIT, we built something we call EduCraft.io, an ed-tech streaming platform (like netflix) with various note-taking automations.
 
 # Product Intro
-![](DocsAndAssets/Architectural_UML_Chart.png)
+![](DocsAndAssets/Intro.png)
 # Our Solution
-![](DocsAndAssets/Architectural_UML_Chart.png)
+![](DocsAndAssets/Solution.png)
 # Our process
-![](DocsAndAssets/Architectural_UML_Chart.png)
+![](DocsAndAssets/Process.png)
 # Live Video Demo - Thumbnail
-![](DocsAndAssets/Architectural_UML_Chart.png)
+![](DocsAndAssets/VideoDemoThumbnail.png)
 # Tech Stack Roadmap
-![](DocsAndAssets/Architectural_UML_Chart.png)
+![](DocsAndAssets/TechStackRoadmap.png)
